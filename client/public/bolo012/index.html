@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOLO012</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/rpg.css">
+  <link rel="stylesheet" href="css/console.css">
+  <link rel="stylesheet" href="css/widgets.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script defer src="js/audio.js"></script>
+  <script defer src="js/clock.js"></script>
+  <script defer src="js/rpg.js"></script>
+  <script defer src="js/mascot.js"></script>
+  <script defer src="js/console.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/modal.js"></script>
+  <script defer src="js/observer.js"></script>
+</head>
+<body>
+  <div id="entry-overlay" class="entry-overlay">
+    <div class="entry-content">
+      <h1 class="glitch-title" data-text="BOLO012">BOLO012</h1>
+      <p class="entry-subtitle">SISTEMA EN ESPERA</p>
+      <button id="entry-btn" class="discord-btn" style="margin-top:2rem; width:auto; padding: 1rem 2rem; font-size: 1rem;">DA CLICK PARA ENTRAR</button>
+    </div>
+  </div>
+  <main class="hud-container">
+    <div class="system-top-bar">
+      <div class="sys-left">
+        <span class="sys-dot"></span>
+        <span class="sys-label">SYS.LOGIN:</span>
+        <span class="sys-user">BOLO012_AUTH</span>
+      </div>
+      <div class="sys-right">
+        <span class="sys-time" id="sys-time">--:--:--</span>
+      </div>
+    </div>
+    <section class="col-left">
+      <div style="grid-column: 1; grid-row: 2; display: flex; flex-direction: column; gap: 1.75rem;">
+        <header class="cyber-header" style="grid-column: auto; grid-row: auto;">
+          <figure class="avatar-frame">
+            <img src="assets/img/perfil.png" alt="Foto de perfil de BOLO012" class="avatar-img" width="220" height="220">
+          </figure>
+          <h1 class="glitch-title" data-text="BOLO012">BOLO012</h1>
+          <p class="cyber-subtitle">BOLILLO - SUS</p>
+          <nav class="social-nav" aria-label="Redes Sociales">
+            <ul class="social-links">
+              <li>
+                <a href="https://github.com/BOLO012" target="_blank" rel="noopener noreferrer" class="social-item social-github" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/bolo012" target="_blank" rel="noopener noreferrer" class="social-item social-twitter" aria-label="Twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@BOLO012" target="_blank" rel="noopener noreferrer" class="social-item social-youtube" aria-label="YouTube">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/bolo012b?stkn=dm42bm9rcGdrYmhh" target="_blank" rel="noopener noreferrer" class="social-item social-instagram" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://tiktok.com/@bolo012_shorts" target="_blank" rel="noopener noreferrer" class="social-item social-tiktok" aria-label="TikTok">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <aside class="badges-widget" aria-label="Insignias">
+          <header class="badges-header">
+            <h2>INSIGNIAS</h2>
+            <i class="fa-solid fa-medal" style="color: var(--cyan);"></i>
+          </header>
+          <div class="badges-content">
+            <p class="glitch-text-subtle" style="font-size: 0.85rem; letter-spacing: 0.1em; color: var(--text-dim);">Sin insignias</p>
+          </div>
+        </aside>
+      </div>
+      <aside class="rpg-hud" aria-label="Panel de Estadísticas RPG">
+        <header class="rpg-header">
+          <h2>Estadisticas</h2>
+          <span class="rpg-status-badge">ONLINE</span>
+        </header>
+        <dl class="rpg-stats-list">
+          <div class="rpg-stat-row">
+            <dt>Nivel</dt>
+            <dd>LVL 0</dd>
+          </div>
+          <div class="rpg-stat-row">
+            <dt>Servidor</dt>
+            <dd>México</dd>
+          </div>
+          <div class="rpg-stat-row">
+            <dt>Clase</dt>
+            <dd>DEVELOPER</dd>
+          </div>
+        </dl>
+        <section class="xp-section">
+          <header class="xp-header">
+            <span class="xp-title">EXP</span>
+            <span class="xp-value" id="xp-text">0 / 10,000 XP</span>
+          </header>
+          <div class="xp-bar-container" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">
+            <span class="xp-bar-progress" id="xp-fill"></span>
+          </div>
+        </section>
+      </aside>
+    </section>
+    <section class="col-right">
+      <div class="top-modules-grid">
+        <section class="crt-monitor" aria-label="Monitor CRT de Bio y Habilidades">
+          <header class="crt-terminal-bar">
+            <span class="crt-indicator red"></span>
+            <span class="crt-indicator yellow"></span>
+            <span class="crt-indicator green"></span>
+            <span class="crt-terminal-title">012_CONSOLE.EXE</span>
+          </header>
+          <article class="crt-bio-block">
+            <h3>BIOGRAFÍA</h3>
+            <p>Soy BOLO un tipo random que se la pasa estudiando, jugando y desarrollando si estas leyendo esto te agradezco tu visita a mis pagina web personal.</p>
+            <ul class="bio-bullets">
+              <li>En relacion <i class="fa-solid fa-heart" style="color: var(--matrix-green);"></i> <i class="fa-solid fa-heart" style="color: var(--cyan);"></i></li>
+              <li>Me encanta Persona 5 <i class="fa-solid fa-heart" style="color: var(--youtube-red);"></i> aunque tampoco sea un viciado al juego XD</li>
+              <li>Jugador de Smash Bross Ultimate y cualquier juego de peleas</li>
+            </ul>
+          </article>
+          <div class="crt-split-layout">
+            <article class="crt-skills-block">
+              <h3>ETIQUETAS</h3>
+              <ul class="skills-tag-list">
+                <li>Desarrollador de software</li>
+                <li>Gamer</li>
+                <li>Sus</li>
+                <li>Introvertido</li>
+                <li>Poco Social</li>
+                <li>Furry (Wolf)</li>
+                <li>Señor Bolillo</li>
+              </ul>
+            </article>
+            <article class="crt-links-block">
+              <h3>PROYECTOS</h3>
+              <ul class="crt-project-list">
+                <li>
+                  <a href="" target="_blank" rel="noopener noreferrer" class="crt-link-btn">
+                    <span>BOLILLO Bot para Discord</span>
+                    <i class="fa-solid fa-terminal"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://medic-learn.com" target="_blank" rel="noopener noreferrer" class="crt-link-btn">
+                    <span>MedicLearn (Escuela Virtual)</span>
+                    <i class="fa-solid fa-terminal"></i>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="crt-output-history" id="console-output"></div>
+          <div class="crt-input-line">
+            <div class="crt-prompt">
+              <span class="prompt-user">bolo012@sys</span><span class="prompt-colon">:</span><span class="prompt-dir">~</span><span class="prompt-symbol">$</span>
+            </div>
+            <input type="text" id="console-input" class="crt-cli-input" placeholder="INGRESA COMANDO_" spellcheck="false" autocomplete="off">
+          </div>
+        </section>
+
+        <section class="mascot-widget" aria-label="Módulo de Mascota Virtual">
+          <header class="mascot-header">
+            <h2>MASCOTA</h2>
+            <nav class="mascot-nav">
+              <button class="mascot-tab active" data-target="mascot-home">
+                <i class="fa-solid fa-house"></i>
+                <span class="tab-label">PRINCIPAL </span>
+              </button>
+              <button class="mascot-tab" data-target="mascot-kitchen">
+                <i class="fa-solid fa-utensils"></i>
+                <span class="tab-label">COCINA</span>
+              </button>
+              <button class="mascot-tab" data-target="mascot-wardrobe">
+                <i class="fa-solid fa-shirt"></i>
+                <span class="tab-label">VESTIDOR</span>
+              </button>
+            </nav>
+          </header>
+
+          <div class="mascot-viewport">
+            <div id="mascot-entity-display"></div>
+          </div>
+
+          <div class="mascot-panels">
+            <!-- HOME -->
+            <div class="mascot-panel active" id="mascot-home">
+              <p class="mascot-status-text">Estado: Ocioso...</p>
+            </div>
+            
+            <!-- KITCHEN -->
+            <div class="mascot-panel" id="mascot-kitchen">
+              <button class="mascot-action-btn disabled">ALIMENTAR (Próximamente)</button>
+            </div>
+            
+            <!-- WARDROBE -->
+            <div class="mascot-panel" id="mascot-wardrobe">
+              <div class="wardrobe-carousel">
+                <button class="wardrobe-nav-btn" id="wardrobe-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="wardrobe-display">
+                  <div class="wardrobe-skin-preview" id="wardrobe-skin-preview">
+                    <!-- Skin preview / Padlock -->
+                  </div>
+                  <h4 id="wardrobe-skin-name">Skin Base</h4>
+                </div>
+                <button class="wardrobe-nav-btn" id="wardrobe-next"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+              <button class="mascot-action-btn" id="wardrobe-equip-btn">EQUIPAR</button>
+              <p class="wardrobe-req-text" id="wardrobe-req-text"></p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="bottom-modules-grid">
+        <section class="discord-widget" aria-label="Servidor de Discord">
+          <header class="discord-header">
+            <h2>SERVIDOR DE DISCORD</h2>
+            <i class="fa-brands fa-discord"></i>
+          </header>
+          <div class="discord-content">
+            <p>Únete a mi servidor de discord.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="discord-btn">INICIAR ENLACE</a>
+          </div>
+        </section>
+
+        <section class="audio-logs-section" aria-label="Logs de Audio y Playlist">
+          <header class="audio-logs-header">
+            <h2>CANCIONES FAVORITAS</h2>
+            <div class="volume-control-container" title="Control de Volumen">
+              <i class="fa-solid fa-volume-low volume-icon" id="volume-icon"></i>
+              <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="0.10" aria-label="Volumen">
+            </div>
+            <i class="fa-brands fa-spotify"></i>
+          </header>
+          <ul class="audio-playlist" id="playlist">
+            <li class="audio-track-item" data-src="assets/audio/song1.mp3" data-title="TRACK 01" data-artist="ARCHIVO LOCAL">
+              <button type="button" class="track-play-button" aria-label="Reproducir Track 1">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <span class="track-details">
+                <strong class="track-title">P4RTY G1RL</strong>
+                <span class="track-artist">Boy Fantasy, g0r3c0r3</span>
+              </span>
+              <time class="track-duration">02:13</time>
+              <span class="equalizer" aria-hidden="true">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+              </span>
+            </li>
+            <li class="audio-track-item" data-src="assets/audio/song2.mp3" data-title="TRACK 02" data-artist="ARCHIVO LOCAL">
+              <button type="button" class="track-play-button" aria-label="Reproducir Track 2">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <span class="track-details">
+                <strong class="track-title">Pretty lil psycho</strong>
+                <span class="track-artist">xofilo, horrormovies, Pixel Hood</span>
+              </span>
+              <time class="track-duration">03:13</time>
+              <span class="equalizer" aria-hidden="true">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+              </span>
+            </li>
+            <li class="audio-track-item" data-src="assets/audio/song3.mp3" data-title="TRACK 02" data-artist="ARCHIVO LOCAL">
+              <button type="button" class="track-play-button" aria-label="Reproducir Track 2">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <span class="track-details">
+                <strong class="track-title">The Spectre</strong>
+                <span class="track-artist">Alan Walker</span>
+              </span>
+              <time class="track-duration">03:26</time>
+              <span class="equalizer" aria-hidden="true">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="coming-soon-widget" aria-label="Módulo en Encriptación">
+          <header class="coming-soon-header">
+            <h2>MÓDULO 04</h2>
+            <i class="fa-solid fa-lock"></i>
+          </header>
+          <div class="coming-soon-content">
+            <p class="glitch-text-subtle">ENCRIPTADO</p>
+            <span class="status-badge">PRÓXIMAMENTE</span>
+          </div>
+        </section>
+      </div>
+    </section>
+    <footer class="cyber-footer">
+      <p>DESARROLLADO POR ESTUDIO B012</p>
+    </footer>
+  </main>
+  <div id="avatar-modal" class="avatar-modal-overlay" aria-hidden="true">
+    <div class="avatar-modal-content">
+      <img src="" id="avatar-modal-img" alt="BOLO012 Ampliado">
+      <button type="button" id="avatar-modal-close" class="avatar-modal-close-btn" aria-label="Cerrar imagen">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

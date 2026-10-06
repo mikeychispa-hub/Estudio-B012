@@ -1,0 +1,25 @@
+:root {
+  --bg-dark: #050505;
+  --panel-bg: rgba(10, 15, 22, 0.88);
+  --cyan: #00f3ff;
+  --matrix-green: #00ff41;
+  --spotify-green: #1DB954;
+  --youtube-red: #ff0000;
+  --text-main: #e2f8ff;
+  --text-dim: #7399a5;
+  --font-display: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  --neon-glow-cyan: 0 0 8px var(--cyan), 0 0 20px rgba(0, 243, 255, 0.35);
+  --neon-glow-green: 0 0 8px var(--matrix-green), 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
